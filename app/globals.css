@@ -2,13 +2,18 @@
 
 :root {
     --background: #171717;
-    --foreground: #ffffff;
+    --foreground: #eff1f3;
 }
 
 @theme {
     --font-family-sans: var(--font-ibm-plex-sans-kr);
     --font-family-montserrat: var(--font-montserrat);
     --font-family-ibm-plex-sans-kr: var(--font-ibm-plex-sans-kr);
+
+    --color-primary: #171717;
+    --color-secondary: #18181d;
+    --color-complementary: #eff1f3;
+    --color-accent: #202029;
 }
 
 body {
