@@ -1,24 +1,31 @@
-import { getNotionPage } from "@/app/libs/getPostBlocks";
-import NotionPageClient from "./NotionPageClient";
+import { getBlogPosts } from "@/app/libs/getBlogPosts";
+import PostBlock from "@/app/components/PostBlock";
 
-export default async function NotionPage() {
-    let recordMap = null;
-
+export default async function BlogPage() {
+    let posts = null;
     try {
-        recordMap = await getNotionPage("28b6741ca8bc80208c0dec13c47cb391");
+        posts = await getBlogPosts();
     } catch (error) {
         return (
-            <div className="flex min-h-screen items-center justify-center p-8">
-                <div className="text-center">
-                    <h1 className="mb-4 text-2xl font-bold text-red-600">
-                        페이지를 불러올 수 없습니다
-                    </h1>
-                    <p className="text-gray-600">
-                        {error instanceof Error ? error.message : "알 수 없는 오류가 발생했습니다"}
-                    </p>
-                </div>
+            <div className="mx-8">
+                <h1 className="text-3xl font-bold text-red-500">Failed to load blog posts</h1>
+                <p className="text-gray-400 text-lg pt-2">
+                    {error instanceof Error
+                        ? error.message
+                        : "An unexpected error occurred while fetching the blog posts."}
+                </p>
             </div>
         );
     }
-    return <NotionPageClient recordMap={recordMap} />;
+    return (
+        <div className="mx-8 max-w-5xl">
+            <div className="grid gap-6">
+                {posts
+                    .filter((post) => post.status == "Public")
+                    .map((post) => (
+                        <PostBlock key={post.id} post={post} />
+                    ))}
+            </div>
+        </div>
+    );
 }
