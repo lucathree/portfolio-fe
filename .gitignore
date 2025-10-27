@@ -39,6 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+types/routes.d.ts
+types/validator.ts
 
 # Claude files
 CLAUDE.md
