@@ -2,6 +2,15 @@
 
 import { useState, useEffect, useRef } from "react";
 
+const ROTATING_TEXTS = [
+    "developing life as a developer",
+    "comparison is the thief of joy",
+    "everything is cringe, until you win",
+    "code your idea",
+    "get over your imposter syndrome",
+    "just do it, now",
+];
+
 export default function HeroSection() {
     const [showAltText, setShowAltText] = useState(false);
     const [isFading, setIsFading] = useState(false);
@@ -10,16 +19,6 @@ export default function HeroSection() {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const fadeTimerRef = useRef<NodeJS.Timeout | null>(null);
     const cleanupTimerRef = useRef<NodeJS.Timeout | null>(null);
-
-    const rotatingTexts = [
-        "developing life as a developer",
-        "comparison is the thief of joy",
-        "everything is cringe",
-        "until you win",
-        "code your idea",
-        "fuck imposter syndrome",
-        "do it, now",
-    ];
 
     const clearFadeTimer = () => {
         if (fadeTimerRef.current) {
@@ -50,7 +49,6 @@ export default function HeroSection() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // 이전 cleanup 타이머가 있다면 명시적으로 제거
             if (cleanupTimerRef.current) {
                 clearTimeout(cleanupTimerRef.current);
             }
@@ -58,14 +56,14 @@ export default function HeroSection() {
             setCurrentTextIndex((prevIndex) => {
                 setPreviousTextIndex(prevIndex);
                 setIsTransitioning(true);
-                return (prevIndex + 1) % rotatingTexts.length;
+                return (prevIndex + 1) % ROTATING_TEXTS.length;
             });
 
             cleanupTimerRef.current = setTimeout(() => {
                 setIsTransitioning(false);
                 setPreviousTextIndex(null);
             }, 600);
-        }, 3000);
+        }, 7000);
 
         return () => {
             clearInterval(interval);
@@ -79,7 +77,7 @@ export default function HeroSection() {
         <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center gap-4">
             <h3 className="font-medium text-4xl">안녕하세요</h3>
             <h2
-                className={`font-medium text-5xl transition-opacity duration-500 ${
+                className={`font-semibold text-highlight text-5xl transition-opacity duration-500 ${
                     isFading ? "opacity-0" : "opacity-100"
                 }`}
                 onMouseEnter={handleMouseEnter}
@@ -87,13 +85,13 @@ export default function HeroSection() {
             >
                 {showAltText ? "Lucas Lee, Backend Developer" : "개발자 이창민 입니다."}
             </h2>
-            <div className="overflow-hidden relative mt-4 min-h-[2rem] w-screen">
+            <div className="overflow-hidden relative mt-5 min-h-[2rem] w-screen">
                 {isTransitioning && previousTextIndex !== null && (
                     <p
                         key={`previous-${previousTextIndex}`}
                         className="text-xl absolute top-0 left-1/2 -translate-x-1/2 w-full animate-slide-out whitespace-nowrap"
                     >
-                        {rotatingTexts[previousTextIndex]}
+                        {ROTATING_TEXTS[previousTextIndex]}
                     </p>
                 )}
                 <p
@@ -102,7 +100,7 @@ export default function HeroSection() {
                         isTransitioning ? "animate-slide-in" : ""
                     }`}
                 >
-                    {rotatingTexts[currentTextIndex]}
+                    {ROTATING_TEXTS[currentTextIndex]}
                 </p>
             </div>
         </section>

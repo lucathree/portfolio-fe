@@ -18,7 +18,7 @@ export default async function BlogPage() {
         );
     }
     return (
-        <div className="mx-8 max-w-5xl">
+        <div className="mx-8 my-8 max-w-5xl">
             <div className="grid gap-6">
                 {posts
                     .filter((post) => post.status == "Public")
