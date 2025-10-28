@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BlogPost } from "../libs/getBlogPosts";
+import { type BlogPost } from "@/app/libs/parseBlogPost";
 
 export default function PostBlock({ post }: { post: BlogPost }) {
     return (
