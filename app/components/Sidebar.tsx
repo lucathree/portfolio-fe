@@ -35,9 +35,7 @@ export default function Sidebar() {
                             }`}
                         >
                             <span className="text-xl pl-5 pr-3">{item.icon}</span>
-                            <span className="font-montserrat font-semibold text-sm">
-                                {item.label}
-                            </span>
+                            <span className="font-semibold text-sm">{item.label}</span>
                         </Link>
                     );
                 })}

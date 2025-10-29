@@ -25,9 +25,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </div>
                 )}
 
-                <h1 className="text-4xl md:text-5xl font-bold font-montserrat my-4">
-                    {post.title}
-                </h1>
+                <h1 className="text-4xl md:text-5xl font-bold my-4">{post.title}</h1>
 
                 {post.date && (
                     <div className="text-sm text-gray-500 my-4">

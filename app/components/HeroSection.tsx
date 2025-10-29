@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 const ROTATING_TEXTS = [
     "developing life as a developer",
@@ -75,9 +76,9 @@ export default function HeroSection() {
 
     return (
         <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center gap-4">
-            <h3 className="font-medium text-4xl">안녕하세요</h3>
+            <h3 className="font-ibm-plex-sans-kr font-medium text-4xl">안녕하세요</h3>
             <h2
-                className={`font-semibold text-highlight text-5xl transition-opacity duration-500 ${
+                className={`font-ibm-plex-sans-kr font-semibold text-highlight text-5xl transition-opacity duration-500 ${
                     isFading ? "opacity-0" : "opacity-100"
                 }`}
                 onMouseEnter={handleMouseEnter}
@@ -85,7 +86,7 @@ export default function HeroSection() {
             >
                 {showAltText ? "Lucas Lee, Backend Developer" : "개발자 이창민 입니다."}
             </h2>
-            <div className="overflow-hidden relative mt-5 min-h-[2rem] w-screen">
+            <div className="font-ibm-plex-sans-kr overflow-hidden relative mt-5 min-h-[2rem] w-screen">
                 {isTransitioning && previousTextIndex !== null && (
                     <p
                         key={`previous-${previousTextIndex}`}
@@ -102,6 +103,20 @@ export default function HeroSection() {
                 >
                     {ROTATING_TEXTS[currentTextIndex]}
                 </p>
+            </div>
+            <div className="flex gap-12 mt-8 font-bold">
+                <Link
+                    href="/works"
+                    className="text-xl text-highlight border-highlight border-3 px-4 pt-1 pb-2 hover:bg-highlight hover:text-complementary transition-colors"
+                >
+                    works
+                </Link>
+                <Link
+                    href="/blog"
+                    className="text-xl text-highlight border-highlight border-3 px-4 pt-1 pb-2 hover:bg-highlight hover:text-complementary transition-colors"
+                >
+                    blog
+                </Link>
             </div>
         </section>
     );

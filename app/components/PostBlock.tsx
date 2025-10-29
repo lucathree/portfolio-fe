@@ -8,9 +8,7 @@ export default function PostBlock({ post }: { post: BlogPost }) {
                 <div className="inline-block py-1 px-3 -ml-1 rounded-full bg-secondary font-semibold">
                     {post.category}
                 </div>
-                <h2 className="my-2 text-2xl font-bold font-montserrat hover:text-highlight">
-                    {post.title}
-                </h2>
+                <h2 className="my-2 text-2xl font-bold hover:text-highlight">{post.title}</h2>
                 {post.description && <p className="my-3 text-gray-200">{post.description}</p>}
                 {post.date && (
                     <div className="mt-4 mb-2 text-sm text-gray-500">
