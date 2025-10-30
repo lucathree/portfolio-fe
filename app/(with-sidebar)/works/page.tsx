@@ -2,6 +2,8 @@ import { getWorkPosts } from "@/app/libs/getWorkPosts";
 import { notFound } from "next/navigation";
 import WorkBlock from "@/app/components/WorkBlock";
 
+export const revalidate = 60;
+
 export default async function WorkPage() {
     let posts = null;
     try {

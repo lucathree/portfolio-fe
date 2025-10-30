@@ -3,6 +3,8 @@ import NotionPage from "@/app/components/NotionPage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+export const revalidate = 60;
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const post = await getBlogPostBySlug(slug);
@@ -53,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </div>
                 )}
             </div>
-            <hr className="border-gray-800" />
+            <hr className="border-gray-800 pb-4" />
             <NotionPage pageId={post.id} />
         </article>
     );

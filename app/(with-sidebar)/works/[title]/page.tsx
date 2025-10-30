@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
+export const revalidate = 60;
+
 export default async function WorkPostPage({ params }: { params: Promise<{ title: string }> }) {
     const { title } = await params;
     const post = await getWorkPostByTitle(title);
@@ -89,7 +91,7 @@ export default async function WorkPostPage({ params }: { params: Promise<{ title
                     )}
                 </div>
             </div>
-            <hr className="border-gray-800" />
+            <hr className="border-gray-800 pb-4" />
             <NotionPage pageId={post.id} />
         </article>
     );
