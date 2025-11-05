@@ -84,7 +84,7 @@ export default function HeroSection() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                {showAltText ? "Lucas Lee, Backend Developer" : "개발자 이창민 입니다."}
+                {showAltText ? "Lucas Lee, Backend Developer" : "백엔드 개발자 이창민 입니다."}
             </h2>
             <div className="font-ibm-plex-sans-kr overflow-hidden relative mt-5 min-h-[2rem] w-screen">
                 {isTransitioning && previousTextIndex !== null && (
