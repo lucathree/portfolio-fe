@@ -4,7 +4,7 @@ import { type BlogPost } from "@/app/libs/parseBlogPost";
 export default function PostBlock({ post }: { post: BlogPost }) {
     return (
         <Link href={`/blog/${post.slug}`}>
-            <article className="rounded-2xl bg-accent p-6 shadow-sm transition-shadow hover:shadow-lg hover:shadow-black/30">
+            <article className="rounded-2xl bg-accent p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30">
                 <div className="inline-block py-1 px-3 -ml-1 rounded-full bg-secondary font-semibold">
                     {post.category}
                 </div>

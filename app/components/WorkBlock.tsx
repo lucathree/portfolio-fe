@@ -4,7 +4,7 @@ import { type WorkPost } from "@/app/libs/parseWorkPost";
 export default function WorkBlock({ post }: { post: WorkPost }) {
     return (
         <Link href={`/works/${post.title}`} className="min-h-[250px]">
-            <article className="h-full w-full bg-accent p-6 shadow-sm transition-shadow hover:shadow-lg hover:shadow-black/30 flex flex-col">
+            <article className="h-full w-full bg-accent p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/30 flex flex-col hover:-translate-y-1">
                 <h2 className="text-xl font-bold hover:text-highlight">{post.title}</h2>
                 {post.description && (
                     <p className="my-3 text-sm text-gray-400">{post.description}</p>
