@@ -1,127 +1,127 @@
 [
     {
         "name": "Python",
-        "category": "Programming Language",
+        "description": "Programming Language",
         "icon": "/icons/tech/python.svg"
     },
     {
         "name": "JavaScript",
-        "category": "Programming Language",
+        "description": "Programming Language",
         "icon": "/icons/tech/javascript.svg"
     },
     {
         "name": "TypeScript",
-        "category": "Programming Language",
+        "description": "Programming Language",
         "icon": "/icons/tech/typescript.svg"
     },
     {
         "name": "Java",
-        "category": "Programming Language",
+        "description": "Programming Language",
         "icon": "/icons/tech/java.svg"
     },
     {
         "name": "FastAPI",
-        "category": "Python Web Framework",
+        "description": "Python Web Framework",
         "icon": "/icons/tech/fastapi.svg"
     },
     {
         "name": "Django",
-        "category": "Python Web Framework",
+        "description": "Python Web Framework",
         "icon": "/icons/tech/django.svg"
     },
     {
         "name": "Nest.js",
-        "category": "Server-side Node.js Framework",
-        "icon": "/icons/tech/nestjs.svg"
+        "description": "Node.js Framework",
+        "icon": "/icons/tech/nest.svg"
     },
     {
         "name": "Spring Boot",
-        "category": "Java Application Framework",
+        "description": "Java Framework",
         "icon": "/icons/tech/spring.svg"
     },
     {
         "name": "PostgreSQL",
-        "category": "Relational DB",
+        "description": "Relational DB",
         "icon": "/icons/tech/postgre.svg"
     },
     {
         "name": "MySQL",
-        "category": "Relational DB",
+        "description": "Relational DB",
         "icon": "/icons/tech/mysql.svg"
     },
     {
         "name": "MongoDB",
-        "category": "NoSQL DB",
+        "description": "NoSQL DB",
         "icon": "/icons/tech/mongodb.svg"
     },
     {
         "name": "Redis",
-        "category": "NoSQL DB",
+        "description": "NoSQL DB",
         "icon": "/icons/tech/redis.svg"
     },
     {
         "name": "Elasticsearch",
-        "category": "NoSQL DB",
+        "description": "NoSQL DB",
         "icon": "/icons/tech/elasticsearch.svg"
     },
     {
         "name": "Docker",
-        "category": "DevOps",
+        "description": "DevOps",
         "icon": "/icons/tech/docker.svg"
     },
     {
         "name": "Git",
-        "category": "Version Control",
+        "description": "Version Control",
         "icon": "/icons/tech/git.svg"
     },
     {
         "name": "GitHub",
-        "category": "Version Control",
+        "description": "Version Control",
         "icon": "/icons/tech/github.svg"
     },
     {
         "name": "GitHub Actions",
-        "category": "CI/CD",
+        "description": "CI/CD",
         "icon": "/icons/tech/github-actions.svg"
     },
     {
         "name": "AWS",
-        "category": "Cloud Service",
+        "description": "Cloud Service",
         "icon": "/icons/tech/aws.svg"
     },
     {
         "name": "Azure",
-        "category": "Cloud Service",
+        "description": "Cloud Service",
         "icon": "/icons/tech/azure.svg"
     },
     {
         "name": "Vercel",
-        "category": "Cloud Service",
+        "description": "Cloud Service",
         "icon": "/icons/tech/vercel.svg"
     },
     {
         "name": "React",
-        "category": "Frontend Library",
+        "description": "Frontend Library",
         "icon": "/icons/tech/react.svg"
     },
     {
         "name": "Next.js",
-        "category": "React Framework",
-        "icon": "/icons/tech/nextjs.svg"
+        "description": "React Framework",
+        "icon": "/icons/tech/next.svg"
     },
     {
         "name": "Bootstrap",
-        "category": "CSS Framework",
+        "description": "CSS Framework",
         "icon": "/icons/tech/bootstrap.svg"
     },
     {
         "name": "Tailwind",
-        "category": "CSS Framework",
+        "description": "CSS Framework",
         "icon": "/icons/tech/tailwind.svg"
     },
     {
         "name": "Linux",
-        "category": "OS",
+        "description": "OS",
         "icon": "/icons/tech/linux.svg"
     }
 ]

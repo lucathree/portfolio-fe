@@ -3,7 +3,7 @@ import path from "path";
 
 export interface TechStack {
     name: string;
-    category: string;
+    description: string;
     icon: string;
 }
 
